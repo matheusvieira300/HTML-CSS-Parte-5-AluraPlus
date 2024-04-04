@@ -1,0 +1,157 @@
+:root { /*root também é uma pseudo-classe*/
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal: 'Inter';
+    --botao-azul-efeito: #3c92fa;
+}
+
+body { /*todos os filhos terão*/
+    background-color: var(--cor-de-fundo);
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+* { /*alterar em todo o projeto*/
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    background-image: url("img/Background.png"); /*este tipo de inserção de imagem é quando é no caso apenas uma imagem decorativa*/
+    background-repeat: no-repeat; /* para não repetir o background*/
+    background-size: contain;/*vai pegar toda a tag e preencher ela no caso a section*/
+    align-items: center;/*alinhando tudo no centro*/
+    text-align: center; /*alinha todos os elementos do bloco*//
+}
+
+.container {
+    height: 100vh;
+    display: grid; /*separação da tela*/
+    grid-template-columns: 50% 50%; /*separando em colunas, deve ser usado junto com o display grid*/
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;/*equivalente a 16px*/
+    color: var(--branco-principal);
+    display: block; /*para ocupar o espaço do bloco inteiro*/
+    text-decoration: none;
+    margin-bottom: 1em;/*margin de baixo, espaço pra baixo de um componente e outro*/
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;/*cima, direita, baixo, esquerda*/
+}
+
+.container__caixa {
+    margin: 0 6em;/*direita e esquerda*/
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em; /*alinhar esquerda e direita*/
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block;/*ele tenta pegar a melhor parte da linha e do bloco*/
+    margin-top: 1em;
+}
+
+.container__descricao {
+    padding: 2em;
+}
+
+.dispositivos__lista {
+    display: flex;/*padrão inicial row*/
+    justify-content: center;/*centralizar a lista*/
+    list-style-type: none;/*tirando os pontinhos da lista*/  
+    margin: 5em 0; /*alinhamento vertical, cima baixo*/
+}
+
+.dispositivos {
+    text-align: center;/*alinhar tudo no centro*/
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__lista {
+    display: flex;/*um ao lado do outro*/
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+/*informando que está alterando o componente a, da lista
+para ser estilizado*/
+.lista__link a{ 
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.lista__link a:hover { /*isso é uma pseudoclasse, indentifica o que estamos fazendo com o mouse e teclado*/
+    color: var(--botao-azul);
+}
+
+.lista__link a:active { /*quando clicar em cima*/
+    color: purple;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);
+}
